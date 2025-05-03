@@ -1,4 +1,5 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+package uiAutomation;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ public class WebTable {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+
         WebDriver driver = new ChromeDriver();
         driver.get("http://demo.guru99.com/test/web-table-element.php");
         driver.manage().window().maximize();
@@ -22,12 +23,10 @@ public class WebTable {
         // Finding the Current Price Row
         for (j = 0; j < table_header.size(); j++) {
             if (table_header.get(j).getText().equals("Current Price (Rs)")) {
-
                 break;
             }
 
         }
-
         // Finding the company name
         for (i = 0; i < row_size; i++) {
             if (company_names.get(i).getText().equals("Asian Paints Ltd.")) {

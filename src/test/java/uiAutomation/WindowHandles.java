@@ -1,20 +1,18 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
+package uiAutomation;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.Set;
 
-public class ActionClass {
+public class WindowHandles {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://omayo.blogspot.com/");
+        driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
         /*String current_window = driver.getWindowHandle();
         driver.findElement(By.xpath("//div/p/button[text()='New Browser Tab']")).click();
         Thread.sleep(5000);
@@ -28,7 +26,7 @@ public class ActionClass {
             itr.next();;
 
         }*/
-        //driver.quit();
+
 
     }
 }
